@@ -11,12 +11,12 @@
 *.lai
 *.la
 *.a
-
+/build/
 
 #Directories and Eclipse Stuff
 .settings
 Debug
 .cproject
 .project
-KIT13ce_working.dbc
+.dbc
 *.bak

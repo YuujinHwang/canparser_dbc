@@ -6,7 +6,10 @@ CMakeFiles/candbcparser.dir/dbciterator.cpp.o: ../dbciterator.hpp
 CMakeFiles/candbcparser.dir/dbciterator.cpp.o: ../message.hpp
 CMakeFiles/candbcparser.dir/dbciterator.cpp.o: ../signal.hpp
 
+CMakeFiles/candbcparser.dir/main.cpp.o: ../dbciterator.hpp
 CMakeFiles/candbcparser.dir/main.cpp.o: ../main.cpp
+CMakeFiles/candbcparser.dir/main.cpp.o: ../message.hpp
+CMakeFiles/candbcparser.dir/main.cpp.o: ../signal.hpp
 
 CMakeFiles/candbcparser.dir/message.cpp.o: ../message.cpp
 CMakeFiles/candbcparser.dir/message.cpp.o: ../message.hpp

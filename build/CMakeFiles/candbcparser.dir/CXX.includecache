@@ -31,8 +31,8 @@ iostream
 -
 stdexcept
 -
-header/dbciterator.hpp
-/mnt/d/Workspace/3secondz/can-dbcparser/header/dbciterator.hpp
+dbciterator.hpp
+/mnt/d/Workspace/3secondz/can-dbcparser/dbciterator.hpp
 
 /mnt/d/Workspace/3secondz/can-dbcparser/message.cpp
 message.hpp
