@@ -57,3 +57,13 @@ std::set<std::string> Message::getTo() const {
 	}
 	return collection;
 }
+
+std::unordered_map<std::string, double> Message::decode(uint64_t payload) {
+	std::unordered_map<std::string, double> frame;
+	for (auto sig : signals)
+	{
+		frame.insert({sig.getName(), sig.getValue(payload)});
+	}
+	return frame;
+}
+

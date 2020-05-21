@@ -1,8 +1,8 @@
 /*
  * main.cpp
  *
- *  Created on: 04.10.2013
- *      Author: downtimes
+ *  Created on: 05.21.2020
+ *      Author: yunjin
  */
 
 #include <iostream>
@@ -15,7 +15,7 @@ const std::string usage = ""
 		"	./parser <FILE>\n"
 		"	\n"
 		"example:\n"
-		"	./parser /home/downtimes/kit13.dbc\n";
+		"	./parser './your/dbc/path/dbc.dbc'\n";
 
 int main(int argc, char* argv[]) {
 	if (argc < 2) {

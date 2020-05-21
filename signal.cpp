@@ -13,6 +13,32 @@
 #include <iterator>
 #include <algorithm>
 
+double Signal::getValue(uint64_t payload){
+	int64_t result = 0;
+	uint8_t *data = (uint8_t *)&payload;
+	unsigned short bit = startBit;
+	for (int bitpos = 0; bitpos < length; bitpos++) {
+        if (data[bit / 8] & (1 << (bit % 8))) {
+            if (order == ByteOrder::INTEL) 
+			{
+                result |= (1ULL << bitpos);
+            } 
+			else 
+			{
+                result |= (1ULL << (length - bitpos - 1));
+            }
+        }
+        bit++;
+    }
+
+    if ((sign == Sign::SIGNED) && (result & (1ULL << (length - 1)))) 
+	{
+        result |= ~((1ULL << length) - 1);
+    }
+
+    return (double)result*factor + offset;
+}
+
 std::string& trim(std::string& str, const std::string& toTrim = " ") {
 	std::string::size_type pos = str.find_last_not_of(toTrim);
 	if (pos == std::string::npos) {
@@ -97,6 +123,19 @@ std::istream& operator>>(std::istream& in, Signal& sig) {
 	sstream >> order;
 	if (order == 0) {
 		sig.order = ByteOrder::MOTOROLA;
+
+		int pos = 7 - (sig.startBit % 8) + (sig.length - 1);
+		if (pos < 8)
+		{
+			sig.startBit -= (sig.length - 1);
+		}
+		else
+		{
+			int cpos = 7 - (pos*8);
+			int bytes = (int)(pos / 8);
+			sig.startBit = cpos + (bytes * 8) + (int)(sig.startBit/8) * 8;
+		}
+		
 	} else {
 		sig.order = ByteOrder::INTEL;
 	}

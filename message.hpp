@@ -13,7 +13,7 @@
 #include <iosfwd>
 #include <cstdint>
 #include <set>
-
+#include <unordered_map>
 #include "signal.hpp"
 
 /**
@@ -32,6 +32,8 @@
 	std::string from;
 	//List containing all Signals which are present in this Message
 	signals_t signals;
+
+	std::unordered_map<std::string, double> sigvalue;
 
 public:
 	typedef signals_t::const_iterator const_iterator;
@@ -56,9 +58,9 @@ public:
 		return signals[elem];
 	}
 
+	std::unordered_map<std::string, double> decode(uint64_t payload); 
+	// 디코딩딩시 변환 하므로, 밸류로 받을것
+
 };
-
-
-
 
 #endif /* MESSAGE_HPP_ */

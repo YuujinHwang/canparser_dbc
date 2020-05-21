@@ -11,6 +11,8 @@
 #include <string>
 #include <iosfwd>
 #include <set>
+#include <vector>
+#include <bitset>
 
 enum class ByteOrder {
 	MOTOROLA,
@@ -63,6 +65,8 @@ class Signal {
 	unsigned short multiplexNum;
 	//Contains to which Control Units in the CAN-Network the Signal shall be sent
 	toList to;
+	//Parse Value
+	// double value;
 
 public:
 	//Overload of operator>> to allow parsing from DBC Streams
@@ -78,10 +82,13 @@ public:
 	double getMaximum() const { return maximum; }
 	double getFactor() const { return factor; }
 	double getOffset() const { return offset; }
+
 	std::string getUnit() const { return unit; }
 	Multiplexor getMultiplexor() const { return multiplexor; }
 	unsigned short getMultiplexedNumber() const { return multiplexNum; }
 	toList getTo() const { return to; }
+
+	double getValue(uint64_t payload);
 
 };
 

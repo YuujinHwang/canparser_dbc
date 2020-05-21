@@ -9,6 +9,7 @@
 #define DBCTREE_HPP_
 
 #include <vector>
+#include <unordered_map>
 #include <iosfwd>
 #include "message.hpp"
 
@@ -22,6 +23,7 @@ class DBCIterator {
 	typedef std::vector<Message> messages_t;
 	//This list contains all the messages which got parsed from the DBC-File
 	messages_t messageList;
+	std::unordered_map<uint32_t, Message> messageMatch;
 
 public:
 	typedef messages_t::const_iterator const_iterator;

@@ -1,0 +1,3 @@
+/mnt/d/Workspace/3secondz/can-dbcparser/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/Workspace/3secondz/can-dbcparser/build/CMakeFiles/candbcparser.dir
+/mnt/d/Workspace/3secondz/can-dbcparser/build/CMakeFiles/edit_cache.dir

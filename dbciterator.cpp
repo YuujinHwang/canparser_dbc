@@ -36,6 +36,7 @@ void DBCIterator::init(std::istream& stream) {
 			stream.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		} else {
 			messages.push_back(msg);
+			messageMatch.insert(std::make_pair(msg.getId(), msg));
 		}
 	} while (!stream.eof());
 	messageList.insert(messageList.begin(), messages.begin(), messages.end());
