@@ -42,6 +42,8 @@ public:
 	messages_t::const_reference operator[](std::size_t elem) const {
 		return messageList[elem];
 	}
+	std::unordered_map<std::string, double> decode(uint32_t msgId, uint64_t payload);
+	
 
 private:
 	void init(std::istream& stream);

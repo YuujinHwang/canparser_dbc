@@ -3,9 +3,11 @@
  *
  *  Created on: 04.10.2013
  *      Author: downtimes
+ *  *  Modified : 05.21.2020
+ * 		Author: Yunjin
  */
 
-#include "header/dbciterator.hpp"
+#include "dbciterator.hpp"
 
 #include <limits>
 #include <fstream>
@@ -40,6 +42,11 @@ void DBCIterator::init(std::istream& stream) {
 		}
 	} while (!stream.eof());
 	messageList.insert(messageList.begin(), messages.begin(), messages.end());
+}
+
+std::unordered_map<std::string, double> DBCIterator::decode(uint32_t msgId, uint64_t payload)
+{
+	return messageMatch[msgId].decode(payload);
 }
 
 

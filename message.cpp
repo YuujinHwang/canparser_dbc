@@ -2,9 +2,11 @@
  * message.cpp
  *
  *  Created on: 04.10.2013
- *      Author: downtimes
+ *      Author: downtimes 
+ *  Modified : 05.21.2020
+ * 		Author: Yunjin
  */
-#include "header/message.hpp"
+#include "message.hpp"
 
 #include <istream>
 #include <limits>

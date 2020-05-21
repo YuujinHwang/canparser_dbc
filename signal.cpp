@@ -3,9 +3,12 @@
  *
  *  Created on: 04.10.2013
  *      Author: downtimes
+ * 
+ *  Modified : 05.21.2020
+ * 		Author: Yunjin
  */
 
-#include "header/signal.hpp"
+#include "signal.hpp"
 
 #include <istream>
 #include <sstream>
