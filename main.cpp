@@ -8,7 +8,7 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "header/dbciterator.hpp"
+#include "dbciterator.hpp"
 
 const std::string usage = ""
 		"This parser is meant to be used via CLI at the moment\n"
