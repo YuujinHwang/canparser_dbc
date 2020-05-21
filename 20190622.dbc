@@ -1,0 +1,77 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+NS_ :
+   NS_DESC_
+   CM_
+   BA_DEF_
+   BA_
+   VAL_
+   CAT_DEF_
+   CAT_
+   FILTER
+   BA_DEF_DEF_
+   EV_DATA_
+   ENVVAR_DATA_
+   SGTYPE_
+   SGTYPE_VAL_
+   BA_DEF_SGTYPE_
+   BA_SGTYPE_
+   SIG_TYPE_REF_
+   VAL_TABLE_
+   SIG_GROUP_
+   SIG_VALTYPE_
+   SIGTYPE_VALTYPE_
+BS_:
+BU_:
+
+BO_ 1170 Engine4: 8 Vector__XXX
+ SG_ EngOilTemp : 32|8@1+ (0.75,-40.0) [0.0|254.0] "deg"  Vector__XXX
+ SG_ CR_Ems_BstPre : 20|12@1+ (1.322,0.0) [0.0|4094.0] "hPa"  Vector__XXX
+ SG_ Gear : 43|3@1+ (1.0,0.0) [0.0|7.0] ""  Vector__XXX
+
+BO_ 672 Engine5: 8 Vector__XXX
+SG_ IAT : 16|8@1+ (0.75,-48) [-48|143.25] "Celcius" Vector__XXX
+
+BO_ 1351 Engine51: 8 Vector_XXX
+SG_ IAT : 16|8@1+ (0.75,-48) [-48|143.25] "Celcius" Vector__XXX
+
+BO_ 790 Engine: 8 Vector__XXX
+SG_ EngRPM : 16|16@1+ (0.25,0) [0|16383.8] "RPM" Vector__XXX
+SG_ VsOdo : 48|8@1+ (1,0) [0|254] "km/h" Vector__XXX
+SG_ AFR : 56|8@1+ (0.0078,0) [0|2] "" Vector__XXX
+
+BO_ 1408 WhlSpd1: 8 Vector__XXX
+SG_ WhlSpdFL : 16|12@1+ (0.125,0) [0|511.875] "km/h" Vector__XXX
+SG_ WhlSpdFR : 28|12@1+ (0.125,0) [0|511.875] "km/h" Vector__XXX
+SG_ WhlSpdRL : 40|12@1+ (0.125,0) [0|511.875] "km/h" Vector__XXX
+SG_ WhlSpdRR : 52|12@1+ (0.125,0) [0|511.875] "km/h" Vector__XXX
+
+BO_ 497 WhlSpd2: 8 Vector__XXX
+SG_ WhlSpdFL : 16|12@1+ (0.125,0) [0|511.875] "km/h" Vector__XXX
+SG_ WhlSpdFR : 28|12@1+ (0.125,0) [0|511.875] "km/h" Vector__XXX
+SG_ WhlSpdRL : 40|12@1+ (0.125,0) [0|511.875] "km/h" Vector__XXX
+SG_ WhlSpdRR : 52|12@1+ (0.125,0) [0|511.875] "km/h" Vector__XXX
+
+BO_ 902 WhlSpd3: 8 Vector__XXX
+ SG_ WhlSpdFL : 0|14@1+ (0.03125,0.0) [0.0|511.96875] "km/h"  _4WD,AFLS,AHLS,AVM,CLU,CUBIS,ECS,EMS,EPB,IBOX,LDWS_LKAS,PGS,PSB,SCC,SMK,SPAS,TCU,TPMS,_4WD,ACU,AFLS,AHLS,AVM,CLU,ECS,EMS,EPB,IBOX,LCA,LDWS_LKAS,PGS,PSB,SCC,SMK,SPAS,TCU,TPMS
+ SG_ WhlSpdFR : 16|14@1+ (0.03125,0.0) [0.0|511.96875] "km/h"  _4WD,ACU,AFLS,AHLS,AVM,CLU,CUBIS,ECS,EMS,EPB,IBOX,LDWS_LKAS,PGS,PSB,SCC,SMK,SPAS,TCU,TPMS,_4WD,ACU,AFLS,AHLS,AVM,CLU,ECS,EMS,EPB,IBOX,LCA,LDWS_LKAS,PGS,PSB,SCC,SMK,SPAS,TCU,TPMS
+ SG_ WhlSpdRL : 32|14@1+ (0.03125,0.0) [0.0|511.96875] "km/h"  _4WD,AFLS,AHLS,AVM,BCM,CLU,CUBIS,ECS,EMS,EPB,IBOX,LDWS_LKAS,PGS,PSB,SCC,SMK,SPAS,TCU,TPMS,_4WD,ACU,AFLS,AHLS,AVM,BCM,CLU,ECS,EMS,EPB,IBOX,LCA,LDWS_LKAS,PGS,PSB,SCC,SMK,SPAS,TCU,TPMS
+ SG_ WhlSpdRR : 48|14@1+ (0.03125,0.0) [0.0|511.96875] "km/h"  _4WD,AFLS,AHLS,AVM,CLU,CUBIS,ECS,EMS,EPB,IBOX,LDWS_LKAS,PGS,PSB,SCC,SMK,SPAS,TCU,TPMS,_4WD,ACU,AFLS,AHLS,AVM,CLU,ECS,EMS,EPB,IBOX,LCA,LDWS_LKAS,PGS,PSB,SCC,SMK,SPAS,TCU,TPMS
+
+
+BO_ 688 Steering: 5 Vector__XXX
+SG_ AngleSteer : 0|16@1- (-0.1,0) [-3276.8|3276.7] "deg" Vector__XXX
+
+BO_ 809 Engine2: 8 Vector__XXX
+SG_ PdlPosAcc : 48|8@1+ (0.3906,0) [0|99.603] "%" Vector__XXX
+SG_ ThrPos : 40|8@1+ (0.469484,-15.0235) [-15.0235|104.695] "%" Vector__XXX
+SG_ EngCoolTemp : 8|8@1+ (0.75,-48) [-48|143.25] "Celcius" Vector__XXX
+
+BO_ 544 ESP: 8 Vector__XXX
+SG_ BrkPres : 26|12@1+ (0.1,0) [0|409.5] "bar" Vector__XXX
+SG_ VehAccelY : 0|11@1+ (0.01,-10.23) [-10.23|10.23] "m/s^2" Vector__XXX
+SG_ VehAccelX : 13|11@1+ (0.01,-10.23) [-10.23|10.23] "m/s^2" Vector__XXX
+SG_ VehAngRateZ : 40|13@1+ (0.01,-40.95) [-40.95|40.95] "deg/s" Vector__XXX
+
+BO_ 1008 LSD: 8 Vector__XXX
+SG_ LSD_TQC : 8|16@1+ (0.0015258,0) [0|100] "%" Vector__XXX
+

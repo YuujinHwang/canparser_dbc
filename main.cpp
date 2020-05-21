@@ -41,10 +41,20 @@ int main(int argc, char* argv[]) {
                 } else if (sig.getMultiplexor() == Multiplexor::MULTIPLEXOR) {
                     std::cout << "+Multiplexor+" << std::endl;
                 }
+                if (sig.getByteOrder() == ByteOrder::INTEL){
+                    std::cout << "INTEL" << std::endl;
+                }
+                else
+                {
+                    std::cout << "MOTO" << std::endl;
+                }
                 std::cout << std::endl;
+                
             };
         }
 
+        std::cout << dbc.decode(688, 77426917114)["AngleSteer"] << std::endl;
+        std::cout << "fin" << std::endl;
 	} catch (std::invalid_argument& ex) {
 		std::cout << ex.what() << std::endl;
 	}

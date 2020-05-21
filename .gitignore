@@ -12,6 +12,7 @@
 *.la
 *.a
 /build/
+/.vscode/
 
 #Directories and Eclipse Stuff
 .settings
