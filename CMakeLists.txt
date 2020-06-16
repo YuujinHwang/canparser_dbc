@@ -4,9 +4,9 @@ set (CMAKE_CXX_STANDARD 11)
 
 add_executable(candbcparser
   dbciterator.cpp
-  header/dbciterator.hpp
-  header/message.hpp
-  header/signal.hpp
+  dbciterator.hpp
+  message.hpp
+  signal.hpp
   main.cpp
   message.cpp
   signal.cpp
