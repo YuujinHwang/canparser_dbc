@@ -4,8 +4,8 @@
  *  Created on: 04.10.2013
  *      Author: downtimes
  * 
- *  Modified : 05.21.2020
- * 		Author: Yunjin
+ *  Modified : 07.21.2022
+ * 		Author: yuxuan.he
  */
 
 #include "signal.hpp"
@@ -126,18 +126,21 @@ std::istream& operator>>(std::istream& in, Signal& sig) {
 	sstream >> order;
 	if (order == 0) {
 		sig.order = ByteOrder::MOTOROLA;
+                int pos = sig.startBit - (sig.startBit%8)+7-(sig.startBit%8);
+                int temp = pos+sig.length-1;
+                sig.startBit = temp -(temp%8)+7-(temp%8);
 
-		int pos = 7 - (sig.startBit % 8) + (sig.length - 1);
-		if (pos < 8)
-		{
-			sig.startBit -= (sig.length - 1);
-		}
-		else
-		{
-			int cpos = 7 - (pos*8);
-			int bytes = (int)(pos / 8);
-			sig.startBit = cpos + (bytes * 8) + (int)(sig.startBit/8) * 8;
-		}
+		//int pos = 7 - (sig.startBit % 8) + (sig.length - 1);
+		//if (pos < 8)
+		//{
+			//sig.startBit -= (sig.length - 1);
+		//}
+		//else
+		//{
+			//int cpos = 7 - (pos*8);
+			//int bytes = (int)(pos / 8);
+			//sig.startBit = cpos + (bytes * 8) + (int)(sig.startBit/8) * 8;
+		//}
 		
 	} else {
 		sig.order = ByteOrder::INTEL;
